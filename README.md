@@ -32,9 +32,11 @@ Tienes dos caminos simples: desde la web de Vercel o usando la CLI.
 4. Importa el repositorio `TripleBogey-Store`.
 5. En la configuración del proyecto usa:
    - **Framework Preset:** `Other`
-   - **Build Command:** dejar vacío o usar `npm run build`
+   - **Build Command:** `npm run build`
    - **Output Directory:** `.`
-   - **Install Command:** dejar vacío
+   - **Install Command:** `npm install` o vacío
+
+> Nota: este repositorio incluye `vercel.json`, así que Vercel debería detectar automáticamente `outputDirectory: "."` y no buscar una carpeta `public`.
 6. Presiona **Deploy**.
 7. Cuando termine, Vercel te entregará una URL pública para revisar la página visualmente.
 
@@ -51,7 +53,7 @@ vercel
 Cuando Vercel pregunte la configuración del proyecto, usa:
 
 - **Framework:** `Other`
-- **Build Command:** `npm run build` o vacío
+- **Build Command:** `npm run build`
 - **Output Directory:** `.`
 
 Para publicar una versión final de producción:
@@ -66,3 +68,4 @@ vercel --prod
 - `src/styles.css`: estilos responsive y diseño visual.
 - `src/main.js`: renderizado de productos iniciales.
 - `package.json`: scripts de ejecución local y validación.
+- `vercel.json`: configuración para que Vercel publique la raíz del proyecto como sitio estático.
